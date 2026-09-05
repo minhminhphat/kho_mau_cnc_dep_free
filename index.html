@@ -3,84 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kho Mẫu CNC Miễn Phí & Thương Mại</title>
+    <title>Danh Mục Mẫu CNC</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        header { background-color: #1a252f; color: #fff; padding: 20px; text-align: center; }
-        nav { background-color: #2c3e50; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px; display: flex; flex-direction: column; justify-content: space-between; }
-        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
-        .card h3 { font-size: 18px; margin: 10px 0; color: #2c3e50; }
-        .price { font-size: 16px; color: #e74c3c; font-weight: bold; margin-bottom: 10px; }
-        .btn-group { display: flex; gap: 10px; }
-        .btn { flex: 1; text-align: center; padding: 10px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 14px; }
-        .btn-primary { background-color: #27ae60; color: white; }
-        .btn-secondary { background-color: #2980b9; color: white; }
-        .ad-space { background: #e0e0e0; border: 1px dashed #999; text-align: center; padding: 20px; margin: 20px 0; color: #666; border-radius: 4px; }
-        footer { background: #1a252f; color: white; text-align: center; padding: 15px; margin-top: 30px; font-size: 14px; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #ffffff; color: #333; }
+        .section-title { text-align: center; color: #d35400; font-size: 28px; margin-bottom: 30px; font-weight: normal; }
+        
+        /* Cấu hình lưới hiển thị danh mục */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Thẻ danh mục */
+        .category-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.2s ease-in-out;
+            background: #fff;
+        }
+
+        /* Hiệu ứng khi rê chuột vào (tương tự ô Hoành Phi trong ảnh) */
+        .category-card:hover {
+            border-color: #3498db;
+            background-color: #f0f8ff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+        .category-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .category-card span {
+            font-size: 14px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>KHO MẪU CNC CHẤT LƯỢNG CAO</h1>
-        <p>Tổng hợp mẫu thiết kế CNC, Laser, Vách ngăn, Tranh gỗ miễn phí & trả phí</p>
-    </header>
+    <h1 class="section-title">Hãy tìm và tải về mẫu bạn cần</h1>
 
-    <nav>
-        <a href="#">Trang Chủ</a>
-        <a href="#">Mẫu Miễn Phí</a>
-        <a href="#">Mẫu Bán Chạy</a>
-        <a href="#">Liên Hệ Zalo</a>
-    </nav>
+    <div class="category-grid">
+        <a href="#mam-tran" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Mam+Tran" alt="Mâm Trần">
+            <span>Mâm Trần</span>
+        </a>
 
-    <div class="container">
-        <!-- Vị trí đặt Quảng cáo Google AdSense sau này -->
-        <div class="ad-space">
-            <p>Vị trí đặt Banner Quảng Cáo (Google AdSense / Banner đối tác)</p>
-        </div>
+        <a href="#da-trien" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Da+Trien" alt="Dạ Triện">
+            <span>Dạ Triện</span>
+        </a>
 
-        <h2>Mẫu CNC Mới Cập Nhật</h2>
-        
-        <div class="grid">
-            <!-- Sản phẩm 1 -->
-            <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Mau+Vach+Ngan+CNC" alt="Mẫu CNC">
-                <h3>Mẫu Vách Ngăn CNC Hoa Văn Hiện Đại</h3>
-                <div class="price">Miễn Phí</div>
-                <div class="btn-group">
-                    <a href="https://drive.google.com" target="_blank" class="btn btn-primary">Tải File (Drive)</a>
-                </div>
-            </div>
+        <a href="#hoanh-phi" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Hoanh+Phi" alt="Hoành Phi">
+            <span>Hoành Phi</span>
+        </a>
 
-            <!-- Sản phẩm 2 -->
-            <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Mau+Tranh+3D+Goi" alt="Mẫu CNC">
-                <h3>Bộ Tranh Gỗ 3D Mã Đáo Thành Công</h3>
-                <div class="price">Giá: 100.000 VNĐ</div>
-                <div class="btn-group">
-                    <a href="https://zalo.me" target="_blank" class="btn btn-secondary">Mua Qua Zalo</a>
-                </div>
-            </div>
+        <a href="#cau-doi" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Cau+Doi" alt="Câu Đối">
+            <span>Câu Đối</span>
+        </a>
 
-            <!-- Sản phẩm 3 -->
-            <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Cua+Cong+CNC" alt="Mẫu CNC">
-                <h3>Mẫu Cửa Cổng CNC Đẹp 2026</h3>
-                <div class="price">Miễn Phí</div>
-                <div class="btn-group">
-                    <a href="https://drive.google.com" target="_blank" class="btn btn-primary">Tải File (Drive)</a>
-                </div>
-            </div>
-        </div>
+        <a href="#do-tho" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Do+Tho" alt="Đồ Thờ">
+            <span>Đồ Thờ</span>
+        </a>
+
+        <a href="#cua" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Cua" alt="Cửa">
+            <span>Cửa</span>
+        </a>
+
+        <a href="#tranh" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Tranh" alt="Tranh">
+            <span>Tranh</span>
+        </a>
+
+        <a href="#khung" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Khung" alt="Khung">
+            <span>Khung</span>
+        </a>
+
+        <a href="#giuong" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Giuong" alt="Giường">
+            <span>Giường</span>
+        </a>
+
+        <a href="#phat-giao" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Phat+Giao" alt="Phật Giáo">
+            <span>Phật Giáo</span>
+        </a>
+
+        <a href="#cong-giao" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Cong+Giao" alt="Công Giáo">
+            <span>Công Giáo</span>
+        </a>
+
+        <a href="#tu-quy" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Tu+Quy" alt="Tứ Quý">
+            <span>Tứ Quý</span>
+        </a>
+
+        <a href="#dong-ho" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Dong+Ho" alt="Đồng Hồ">
+            <span>Đồng Hồ</span>
+        </a>
+
+        <a href="#doc-lich" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Doc+Lich" alt="Đốc Lịch">
+            <span>Đốc Lịch</span>
+        </a>
+
+        <a href="#khay-tra" class="category-card">
+            <img src="https://via.placeholder.com/80?text=Khay+Tra" alt="Khay Trà">
+            <span>Khay Trà</span>
+        </a>
     </div>
-
-    <footer>
-        <p>© 2026 Kho Mẫu CNC Minh Minh Phát. Mọi quyền được bảo lưu.</p>
-    </footer>
 
 </body>
 </html>
